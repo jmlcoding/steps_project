@@ -9,6 +9,9 @@
 </head>
 <body>
     <h1 style="color: brown">Laravel</h1>
+    <h1 style="color: brown">Laravel</h1>
+    <h1 style="color: brown">Laravel</h1>
+    <h1 style="color: brown">Laravel</h1>
     <h2><a href="{{route('contact')}}">contactus</a></h2>
 </body>
 </html>
