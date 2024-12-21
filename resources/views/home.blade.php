@@ -12,6 +12,6 @@
     <h1 style="color: brown">Laravel</h1>
     <h1 style="color: brown">Laravel</h1>
     <h1 style="color: brown">Laravel</h1>
-    <h2><a href="{{route('contact')}}">contactus</a></h2>
+    <h2><a href="{{url('/contactus')}}">contactus</a></h2>
 </body>
 </html>
