@@ -19,4 +19,5 @@ Route::controller(MainController::class)
 ->group(function(){
     Route::get('/','index')->name('index');
     Route::get('/contactus','contactus')->name('contact');
+    Route::post('/contactus','contactpost')->name('contact.post');
 });
