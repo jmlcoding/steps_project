@@ -21,7 +21,8 @@ class MainController extends Controller
           'ln'=>'required|string',
           'email'=>'required|email',
           'phone'=>'required|string',
-          'code'=>'required|string',
+          'inquiry'=>'required|in:investor,partner,developer,tenant',
+          'description'=>'nullable|string'
        
         ]);
       

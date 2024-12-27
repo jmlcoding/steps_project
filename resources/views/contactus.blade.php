@@ -52,7 +52,6 @@
          @enderror
          <label for="phone">Phone Number*</label>
          <input id="phone" type="tel" name="phone" />
-         <input type="hidden" id="hidden-phone" name="code" />
          @error('phone')
          <p style="color: red;font-size:10px">{{$message}}</p>
          @enderror
@@ -195,10 +194,10 @@
                  form.addEventListener('submit', function(event) {
                     
                      const countryCode = phoneInput.getSelectedCountryData().dialCode;
-                     const phoneNumber = phoneInput.getNumber();
+                     const phoneNumber = countryCode.getNumber();
            
                      phoneInputField.value = phoneNumber;
-                     hiddenPhoneField.value = `+${countryCode}`;
+                
                  });
              });
     

@@ -4,9 +4,10 @@
 <p>Last name: {{$data['ln']}}</p>
 <p>Email: {{$data['email']}}</p>
 <p>Phone Number: {{$data['phone']}}</p>
-<p>code: {{$data['code']}}</p>
-{{-- <p>Inquiry Type: {{$data['inquiry']}}</p>
-<p>Additional Info: {{$data['description']}}</p> --}}
+<p>Inquiry Type: {{$data['inquiry']}}</p>
+@if($data['description'])
+<p>Additional Info: {{$data['description']}}</p>
+@endif
 
 Regards,<br>
 {{ config('app.name') }}
