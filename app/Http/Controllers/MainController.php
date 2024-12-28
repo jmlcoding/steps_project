@@ -17,8 +17,8 @@ class MainController extends Controller
     public function contactpost(Request $request)
     {
         $data = $request->validate([
-          'fn'=>'required|string',
-          'ln'=>'required|string',
+          'firstname'=>'required|string',
+          'lastname'=>'required|string',
           'email'=>'required|email',
           'phone'=>'required|string',
           'inquiry'=>'required|in:investor,partner,developer,tenant',
@@ -28,7 +28,7 @@ class MainController extends Controller
       
         Mail::to('anony.jjml@gmail.com')->send(new Contact($data));
 
-        return redirect()->route('contact')->with('success', 'Thanks for submitting the form');
+        return redirect('/contactus')->with('success', 'Thanks for submitting the form');
         
     }
 }

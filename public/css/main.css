@@ -35,18 +35,18 @@ nav{
 }
 .first-container button{
     all: unset;
-    border: 2px solid rgb(243, 133, 55);
+    border: 2px solid #E96726;
     padding: 2px;
     text-align: center;
     font-size: small;
-    color: rgb(243, 133, 55);
+    color: #E96726;
     border-radius: 7px;
     width: 40px;
     font-weight: 500;
     font-size: 17px;
 }
 .first-container ul li a{
-    color: rgb(243, 133, 55);
+    color: #E96726;
     text-decoration: underline;
 }
 .second-container ul{
@@ -60,7 +60,7 @@ nav{
 }
 .add-listing{
     all: unset;
-    background-color: rgb(242, 131, 52);
+    background-color: #E96726;
     padding: 5px;
     text-align: center;
     font-size: small;
@@ -138,7 +138,7 @@ margin: auto 0;
             padding: 5px;
             text-align: center;
             border-radius:5px ;
-            background-color: chocolate;
+            background-color: #E96726;
             color: #fff;
             width: 18%;
             margin-top: 40px;
@@ -149,7 +149,7 @@ margin: auto 0;
     padding:30px;
 }
 .right-container h3{
-    color: rgb(233, 143, 7);
+    color: #E96726;
 }
 .right-container table{
     border-collapse: collapse;
@@ -200,6 +200,14 @@ text-align: left;
     height: 100%;
     padding: 15px;
  }
+ .first-map,
+ .second-map {
+     flex: 1;
+     min-width: calc(50% - 16px); /* Ensure maps fit inside the container */
+     height: 300px;
+     box-sizing: border-box;
+ }
+
 .maps h1{
     text-align: center;
     font-size: 3rem;
@@ -209,7 +217,7 @@ text-align: left;
     padding: 20px;
     border: 1px solid black;
     border-radius: 10px;
-    height: 400px;
+    height: 380px;
     display: flex;
     gap: 8px;
 }
@@ -217,11 +225,102 @@ text-align: left;
     width: 100%; 
     height: 90%;
 }
+.map-container iframe{
+    width: 100%;
+    height: 300px;
+}
 .branch-desc{
     margin-top: 3px;
     background-color: rgba(105, 105, 105, 0.37);
     padding: 7px;
 }
+.branch-desc p{
+  margin-bottom: 0;
+}
 .branch-desc >p:first-child{
     font-weight: 600;
 }
+@media (max-width: 700px){
+    .left-container form button{
+      width: 50%;
+      margin: 30px auto;
+    }
+    .contactdetails {
+      grid-template-columns: 1fr;
+      width: 95%;
+        transform: translateY(-50px);
+        padding: 8px;
+    }
+    .maps {
+      width: 90%;
+      padding: 10px;
+  }
+  
+  .maps h1 {
+      font-size: 2.5rem; 
+  }
+  
+  .container-map {
+      flex-direction: column;
+      padding: 10px;
+      height: 564px !important;
+      gap: 16px;
+      border: 1px solid black; 
+  }
+  .map-container iframe{
+    width: 100%;
+    height: 200px;
+}
+  .first-map,
+  .second-map {
+      width: 100%; 
+      height: 250px; 
+  }
+  
+  .map-container {
+      height: 200px; 
+  }
+  
+  .branch-desc {
+    margin-top: 3px !important;
+      padding: 10px; 
+      font-size: 14px; 
+  }
+  }
+  
+  
+  
+  @media (max-width: 480px) {
+  
+    .left-container {
+        padding: 15px;
+    }
+  
+    .left-container form input[type="text"],
+    .left-container form input[type="tel"],
+    .left-container form select,
+    .left-container form textarea {
+        height: 35px;
+        font-size: 14px;
+    }
+    .left-container form button{
+      width: 50%;
+    }
+    .right-container table {
+        font-size: 12px;
+    }
+  
+    .contactdetails {
+      grid-template-columns: 1fr;
+      width: 95%;
+        transform: translateY(-40px);
+        padding: 8px;
+    }
+    .container-map {
+      flex-direction: column; 
+      padding: 10px;
+      height: auto;
+      gap: 16px;
+      border: 1px solid black; 
+  }
+  }
