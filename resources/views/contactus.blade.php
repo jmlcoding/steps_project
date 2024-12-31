@@ -203,8 +203,8 @@
 fetch('https://get.geojs.io/v1/ip/geo.json')
         .then(response => response.json())
         .then(data => {
-            const countryCode = data.country_code;  // Country code like "US", "IN", etc.
-            phoneInput.setCountry(countryCode.toLowerCase());  // Set the country
+            const country = data.country_code;  // Country code like "US", "IN", etc.
+            phoneInput.setCountry(country);  // Set the country
         })
         .catch(error => console.error('Error fetching location:', error));
         const form = document.querySelector('#phone-form');
