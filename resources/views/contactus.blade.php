@@ -192,15 +192,21 @@
         });
 
         // fetching flag upon ip address
-        fetch('https://ip-api.com/json/')
-.then(response => response.json())
-.then(data => {
-    const country = data.countryCode; 
+//         fetch('http://ip-api.com/json/')
+// .then(response => response.json())
+// .then(data => {
+//     const country = data.countryCode; 
  
-        phoneInput.setCountry(data.countryCode); 
-})
-.catch(error => console.error('Error fetching location:', error));
-
+//         phoneInput.setCountry(data.countryCode); 
+// })
+// .catch(error => console.error('Error fetching location:', error));
+fetch('https://get.geojs.io/v1/ip/geo.json')
+        .then(response => response.json())
+        .then(data => {
+            const countryCode = data.country_code;  // Country code like "US", "IN", etc.
+            phoneInput.setCountry(countryCode.toLowerCase());  // Set the country
+        })
+        .catch(error => console.error('Error fetching location:', error));
         const form = document.querySelector('#phone-form');
         form.addEventListener('submit', function (eo) {
             eo.preventDefault();
@@ -221,6 +227,7 @@
             form.submit();
         });
     });
+
     
     </script>
 
